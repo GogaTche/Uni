@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 01846802_A_Afonso_Silva_76943</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/submissions/01846802_A_Afonso_Silva_76943">01846802_A_Afonso_Silva_76943</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/submissions/01846802_A_Afonso_Silva_76943/TwualgerA.java">TwualgerA.java</a>
+<a href="data/contests/AED22P4/submissions/01846802_A_Afonso_Silva_76943/TwualgerA.java">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Mon Nov 28 21:38:02 +0000 2022</td></tr>
+<tr><th>Analyzed</td>	<td>Mon Nov 28 21:38:02 +0000 2022 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/groups/students/Afonso_Silva_76943">
+Afonso_Silva_76943
+</a> Login: <code>Afonso_Silva_76943</code> Group: students [students]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/problems/A">
+A: TwualgerA
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>src/aed/twualger/tests/TwualgerATests.java:86: error: cannot find symbol
+        System.out.println("Total caches: " + twualger.getCaches().size());
+                                                      ^
+  symbol:   method getCaches()
+  location: variable twualger of type TwualgerA
+src/aed/twualger/tests/TwualgerATests.java:94: error: cannot find symbol
+        System.out.println("Total caches: " + twualger.getCaches().size());
+                                                      ^
+  symbol:   method getCaches()
+  location: variable twualger of type TwualgerA
+src/aed/twualger/tests/TwualgerATests.java:139: error: cannot find symbol
+        System.out.println("Total caches: " + twualger.getCaches().size());
+                                                      ^
+  symbol:   method getCaches()
+  location: variable twualger of type TwualgerA
+src/aed/twualger/tests/TwualgerATests.java:149: error: cannot find symbol
+        System.out.println("Total caches: " + twualger.getCaches().size());
+                                                      ^
+  symbol:   method getCaches()
+  location: variable twualger of type TwualgerA
+src/aed/twualger/tests/TwualgerATests.java:158: error: cannot find symbol
+        System.out.println("Total caches: " + twualger.getCaches().size());
+                                                      ^
+  symbol:   method getCaches()
+  location: variable twualger of type TwualgerA
+src/aed/twualger/tests/TwualgerATests.java:275: error: cannot find symbol
+        caches = twualger.getCaches();
+                         ^
+  symbol:   method getCaches()
+  location: variable twualger of type TwualgerA
+src/aed/twualger/tests/TwualgerATests.java:285: error: cannot find symbol
+        caches = twualger.getCaches();
+                         ^
+  symbol:   method getCaches()
+  location: variable twualger of type TwualgerA
+7 errors</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre></pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+package aed.twualger;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+
+
+
+public class TwualgerA extends Twualger{
+
+    private ArrayList&lt;UserCacheA&gt; cache;
+
+
+    public TwualgerA(String path)
+    {
+        super(path);
+    }
+     
+    public static UserCacheA readUserTweetsFromFile(String path, String userHandle)
+    {
+        ArrayList&lt;Tweet&gt; tweets = new ArrayList&lt;&gt;();
+        UserCacheA result = new UserCacheA(userHandle);
+        try{
+            File file = new File(path + "\\" + userHandle + ".csv");
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = br.readLine();
+            while ((line = br.readLine()) != null) {
+                    String[] tweetSplit = (line.split(","));
+                    Tweet tweet = new Tweet(Long.parseLong(tweetSplit[0]),  OffsetDateTime.parse(tweetSplit[1], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ssZZZZZ")), userHandle, tweetSplit[2]);
+                    System.out.println(tweet.toString());
+                    tweets.add(tweet);
+            }
+            fr.close(); 
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        result.tweets = tweets;
+        result.useCount++;
+        return result;
+    }
+
+
+    public UserCacheA getUserCache(String userHandle)
+    {
+        //TODO: implement
+        return null;
+    }
+
+
+
+    public List&lt;Tweet&gt; buildTimeLine(List&lt;String&gt; following, OffsetDateTime from, OffsetDateTime to)
+    {
+        //TODO: implement
+        return null;
+    }
+
+    public int totalSearches()
+    {
+
+        //TODO: implement
+        return 0;
+    }
+
+    public float cacheHitRatio()
+    {
+        //TODO: implement
+        return 0;
+    }
+
+    public void downsizeCache()
+    {
+        //TODO: implement
+    }
+
+    public static void main(String[] args)
+    {
+        // TwualgerA twualger = new TwualgerA("data");
+
+        // ArrayList&lt;String&gt; following = new ArrayList&lt;String&gt;(Arrays.asList("elonmusk","RobertDowneyJr","Cristiano"));
+
+        // List&lt;Tweet&gt; tweets = twualger.buildTimeLine(
+        //         following,
+        //         OffsetDateTime.of(2022,4,1,0,0,0,0, ZoneOffset.UTC),
+        //         OffsetDateTime.of(2022,4,29,23,59,0,0,ZoneOffset.UTC));
+
+        // printTweets(tweets);
+        readUserTweetsFromFile("C:\\Users\\afons\\OneDrive\\Documentos\\aed\\p4\\data", "elonmusk");
+
+    }
+
+}
+
+</pre>
+
+</body>

@@ -1,0 +1,40 @@
+body{
+    background-color:#1A1A1A;
+}
+
+#headerDiv{
+    height:55px;
+}
+
+#boxRegister{
+    border: 2px solid white;
+    height:450px; 
+    width:200px; 
+    margin: auto; 
+    text-align: center; 
+    align-items: center;
+}
+
+#label{
+    outline: none;
+    background-color: #333333;
+    border: none;
+    color: #fefeff;
+}
+
+#registerHead{
+    color:#fefeff;
+}
+
+#registerButton{
+    width: 100px; 
+    height: 25px;
+    background-color:#333333;
+    color:#fefeff;
+    border: none;
+}
+
+#registerButton:hover{
+    opacity: 0.8;
+    background-color: #292828;
+}

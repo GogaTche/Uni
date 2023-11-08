@@ -1,0 +1,396 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00349103_A_Afonso_Silva_76943</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/submissions/00349103_A_Afonso_Silva_76943">00349103_A_Afonso_Silva_76943</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/submissions/00349103_A_Afonso_Silva_76943/MergeInsertionSort.java">MergeInsertionSort.java</a>
+<a href="data/contests/AED22P3/submissions/00349103_A_Afonso_Silva_76943/MergeInsertionSort.java">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri Nov 11 13:36:30 +0000 2022</td></tr>
+<tr><th>Analyzed</td>	<td>Fri Nov 11 13:36:30 +0000 2022 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/groups/students/Afonso_Silva_76943">
+Afonso_Silva_76943
+</a> Login: <code>Afonso_Silva_76943</code> Group: students [students]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/problems/A">
+A: MergeInsertionSort
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>src/aed/sorting/MergeInsertionSort.java:159: error: no suitable method found for nextInt(int,int)
+            randomNumber = randomGenerator.nextInt(i, i+2);
+                                          ^
+    method Random.nextInt() is not applicable
+      (actual and formal argument lists differ in length)
+    method Random.nextInt(int) is not applicable
+      (actual and formal argument lists differ in length)
+1 error</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre></pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+package aed.sorting;
+
+import aed.utils.TemporalAnalysisUtils;
+
+import java.util.Random;
+
+public class MergeInsertionSort extends Sort {
+
+    private static final int MAX_INTERVAL = 64;
+
+    //creates a random generator with a specific seed
+    //this is useful for testing methods that are supposed to generate random elements
+    //because we can always repeat the same tests by using the same seed
+    private static final Random pseudoRandom = new Random(4582);
+
+    //sort an array of elements (using MergeSort Bottom Up)
+    //this method uses extra memory of O(n) to perform the sort
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void traditionalBottomUpSort(T[] a)
+    {
+        int n = a.length;
+        @SuppressWarnings("unchecked")
+        T[] aux = (T[]) new Comparable[n];
+       for(int groupSize = 1; groupSize &lt; n; groupSize *= 2)
+                  {
+                  for(int low = 0; low &lt; n - groupSize; low += 2*groupSize)
+                  {
+                       merge(a, aux, low, low+groupSize-1, Math.min(low+2*groupSize-1,n-1));
+                  }
+                  }
+
+    }
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void merge(T[] a, T[] aux, int low, int mid, int high)
+    {
+        int left = low;
+          int right = mid+1;
+           for(int i = low; i &lt;= high; i++)
+                {
+                aux[i] = a[i];
+                }
+            for(int i = low; i &lt;= high; i++)
+                {
+                //left array is exausted
+                if (left &gt; mid) a[i] = aux[right++];
+                //right array is exausted
+                else if (right &gt; high) a[i] = aux[left++];
+                else if (less(aux[right],aux[left])) a[i] = aux[right++];
+                else a[i] = aux[left++];
+                }
+    }
+
+    //sort an array of elements (using InsertionSort) from low to high (including)
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void insertionSort(T[] a, int low, int high)
+    {
+
+        for(int i = low + 1; i &lt;= high; i++)
+        {
+        for(int j = i; j &gt; low ; j--)
+        {
+        if(less(a[j],a[j-1]))
+        {
+        exchange(a, j,j-1);
+        }
+        else break;
+        }
+        }
+    }
+
+    // public static boolean isExponential(int n, int e){
+    //     int k = 2;
+    //      while(k &lt; n){
+    //         if(k == n)return true;
+    //         else k *= e;
+    //      }
+    //      return false;
+    // }
+
+
+    public static int determineRunSize(int n){
+        int k = n;
+        int r = 0;
+        if(k &gt;= 64){
+        while(k &gt; 0){
+            if(k % 2 != 0) r++;
+            if(k/2 &gt;= 32 &amp;&amp; k/2 &lt; 64 &amp;&amp; r != 0) return k/2 + 1;
+            else if(k/2 &gt;= 32 &amp;&amp; k/2 &lt; 64) return k/2;
+            k/=2;
+        }
+       }
+       return k;
+    }
+
+//     public static boolean isSorted(Comparable[] a)
+// {
+// for (int i = 1; i &lt; a.length; i++)
+// {
+// if (less(a[i],a[i-1])) return false;
+// }
+// return true;
+// }
+
+
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void sort(T[] a)
+    {
+        int n = a.length;
+        @SuppressWarnings("unchecked")
+        T[] aux = (T[]) new Comparable[n];
+        int k = determineRunSize(n);
+        int low = 0;
+        int high = k;
+        if(n &lt; 64){
+            insertionSort(a, 0, n-1);                   
+            return;
+        }
+        while(low &lt; n){
+            high += low;
+            if(high &gt;= n-1) high = n-1;
+            insertionSort(a, low, high);
+            low += k;
+        }
+        for(int q = k; q &lt; n; q *= 2)
+        {
+        for(int lowest = 0; lowest &lt; n - q; lowest += 2*q)
+        {
+             merge(a, aux, lowest, lowest+q-1, Math.min(lowest+2*q-1,n-1));
+  
+        }
+        }
+        // traditionalBottomUpSort(a);
+    }
+
+
+    public static Integer[] generateRandomExample(int n)
+    {
+        return generateRandomExample(pseudoRandom,n);
+    }
+
+    public static Integer[] generateRandomExample(Random randomGenerator, int n)
+    {
+        Integer[] a = new Integer[n];
+        for(int i = 0; i &lt; n; i++){
+            a[i] = randomGenerator.nextInt(n);
+        }
+        return a;
+    }
+
+    public static Integer[] generateMostlySortedExample(int n)
+    {
+       return generateMostlySortedExample(pseudoRandom,n);
+    }
+
+    public static Integer[] generateMostlySortedExample(Random randomGenerator, int n)
+    {
+        Integer[] a = new Integer[n];
+        int randomNumber = 0;
+        a[0] = 0;
+        for(int i = 1; i &lt; n - n/10; i++){
+            randomNumber = randomGenerator.nextInt(i, i+2);
+            if(randomNumber &lt; a[i - 1]) a[i] = a[i - 1] + 1;
+            else a[i] = randomNumber;
+        }
+        for(int i = n - n/10; i &lt; n; i++){
+            randomNumber = randomGenerator.nextInt(i);
+            if(randomNumber &gt; a[i - 1]) a[i] = a[i - 1] - 1;
+            else a[i] = randomNumber;
+        }
+        return a;
+    }
+
+    public static Integer[] generateAlmostSortedExample(int n)
+    {
+        return generateAlmostSortedExample(pseudoRandom,n);
+    }
+
+    public static Integer[] generateAlmostSortedExample(Random randomGenerator, int n)
+    {
+        Integer[] a = new Integer[n];
+        int randomNumber = 0;
+        a[0] = 0;
+        for(int i = 1; i &lt; n - n/100; i++){
+            randomNumber = randomGenerator.nextInt(i);
+            if(randomNumber &lt; a[i - 1]) a[i] = a[i - 1] + 1;
+            else a[i] = randomNumber;
+        }
+        for(int i = n - n/100; i &lt; n; i++){
+            randomNumber = randomGenerator.nextInt(i);
+            if(randomNumber &gt; a[i - 1]) a[i] = a[i - 1] - 1;
+            else a[i] = randomNumber;
+        }
+        return a;
+    }
+
+    public static Integer[] generateAscendingExample(int n)
+    {
+        return generateAscendingExample(pseudoRandom,n);
+    }
+
+    public static Integer[] generateAscendingExample(Random randomGenerator, int n)
+    {
+        Integer[] a = new Integer[n];
+
+        int randomNumber = 0;
+        a[0] = 0;
+        for(int i = 1; i &lt; n; i++){
+            randomNumber = randomGenerator.nextInt(i);
+            if(randomNumber &lt; a[i - 1]) a[i] = a[i - 1] + 1;
+            else a[i] = randomNumber;
+        }
+        return a;
+    }
+
+    public static Integer[] generateDescendingExample(int n)
+    {
+       return generateDescendingExample(pseudoRandom,n);
+    }
+
+
+    public static Integer[] generateDescendingExample(Random randomGenerator, int n)
+    {
+        Integer[] a = new Integer[n];
+        int r = n;
+        int randomNumber = 0;
+        a[0] = n - 1;
+        for(int i = 1; i &lt; n; i++){
+            if(r &gt;= 0)randomNumber = randomGenerator.nextInt(r);
+            else randomNumber = 0;
+            if(randomNumber &gt; a[i - 1]) a[i] = a[i - 1] - 1;
+            else a[i] = randomNumber;
+            r--;
+        }
+        return a;
+    }
+
+
+
+    // public long TimeTest(){
+    //     Comparable[] bytes = new Comparable[100000000];
+    //     for (int i = 99999999; i &gt;= 0; i--){
+    //         bytes[i] = i;
+    //     }
+    //     start();
+    //     sort(bytes);
+    //     // System.out.print("[");
+    //     // for (int i = 0; i &lt; bytes.length; ++i){
+    //     //     System.out.print(bytes[i] + " ");
+    //     // }
+    //     // System.out.println("]");
+    //     stop();
+    //     System.out.print(isSorted(bytes));
+    //     return getElapsedTime();
+    // }
+
+    public static double sortedP(Integer[] a){
+        double n = a.length;
+        double sorted = 0;
+        for(int i = 1; i &lt; n; i++){
+            if(a[i - 1] &gt; a[i])sorted++;
+        }
+     return (sorted/n);
+    }
+
+    public static void main(String[] args){
+        Random random = new Random();
+       // TemporalAnalysisUtils.runDoublingRatioTest("tests.tsv","Merge/Random",MergeInsertionSort::generateRandomExample,MergeInsertionSort::sort,100,15,30);
+        // TemporalAnalysisUtils.runDoublingRatioTest("tests.tsv","Merge/Mostly",MergeInsertionSort::generateMostlySortedExample,MergeInsertionSort::sort,100,15,30);
+        // TemporalAnalysisUtils.runDoublingRatioTest("tests.tsv","Merge/Almost",MergeInsertionSort::generateAlmostSortedExample,MergeInsertionSort::sort,100,15,30);
+        // System.out.print("true");
+        int n = 1000;
+        Integer a[] = generateAlmostSortedExample(n);
+        // insertionSort(a, 0, 20);
+        //  for (int i = 0; i &lt; 100; i++){
+        //      System.out.print("{"+a[i]+"}" + " ");
+        //  }
+        //  System.out.print("------------------------------------------------------------------------------------------------------------------------------------------------");
+        // sort(a);~
+        for (int i = 0; i &lt; n; i++){
+            System.out.print("{"+a[i]+"}" + " ");
+        }
+        System.out.println(1 - sortedP(a));
+        System.out.print(isSorted(a));
+    }
+
+    //this method might be usefull for testing
+    // private static void printArray(Object[] a, int low, int high){
+    //     if(a == null || a.length == 0)
+    //     {
+    //         System.out.println("Array: []");
+    //         return;
+    //     }
+
+    //     if(low &gt; 0)
+    //     {
+    //         System.out.print("Array: [...");
+    //     }
+    //     else
+    //     {
+    //         System.out.print("Array: [");
+    //     }
+
+    //     for(int i = low; i &lt;= high; i++)
+    //     {
+    //         System.out.print(a[i]+",");
+    //     }
+    //     if(high &lt; a.length-1)
+    //     {
+    //         System.out.print(a[a.length-1]+"...]");
+    //     }
+    //     else
+    //     {
+    //         System.out.print(a[a.length-1]+"]");
+    //     }
+
+    //     System.out.println();
+    
+// }
+}
+
+</pre>
+
+</body>

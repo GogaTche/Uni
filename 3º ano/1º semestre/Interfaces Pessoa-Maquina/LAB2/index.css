@@ -1,0 +1,115 @@
+#homeIcon{
+    position: relative; 
+    float: left;
+}
+
+body{
+    background-color:#1A1A1A;
+}
+
+#headerDiv{
+    margin: auto; 
+    align-items: center; 
+    text-align: center;
+}
+
+div{
+    height:55px;
+}
+
+#seachBar{
+    position: relative;
+    /* bottom: 25px;  */
+    top: 7px;
+    border-radius: 35px;
+    background: #333333;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+    border: none;
+    /* left: 20px; */
+    outline: none;
+    color: #fefeff;
+}
+
+
+
+#RegisterButton{
+    position: relative; 
+    top: 10px; 
+    height:35px; 
+    width:100px;
+    float: right; 
+    background-color: #333333;
+    border: none;
+    color:#fefeff;
+    cursor: pointer;
+}
+
+#LoginButton{
+    position: relative; 
+    top: 10px;
+    height:35px; 
+    width:100px;
+    float: right;
+    background-color:#333333;
+    border: none;
+    color:#fefeff;
+    position: relative; 
+    right: 5px;
+    cursor: pointer;
+}
+
+#headers{
+    position: relative; 
+    bottom: 9px; 
+}
+
+#LoginButton:hover{
+    opacity: 0.8;
+    background-color: #292828;
+}
+
+#RegisterButton:hover{
+    opacity: 0.8;
+    background-color: #292828;
+}
+
+#divMessage{
+    height:200px; 
+    margin: auto; 
+    border: 2px solid #fefeff;
+}
+
+#topBoxText{
+    font-size: 40px;
+    position: relative; 
+    left: 20px;
+    color: #fefeff;
+}
+
+#bottomBoxText{
+    position: relative; 
+    margin: auto;
+    color: #fefeff;
+}
+
+#textDiv{
+    position: relative; 
+    text-align: left;
+    margin: 10px; 
+}
+
+#profilePic{
+    position: relative; 
+    left: 10px;
+    top: 10px;
+}
+
+#dataHora{
+    font-size: 20px;
+    position: relative; 
+    left: 30px;
+    color: #fefeff;
+}
+

@@ -1,0 +1,40 @@
+body{
+    background-color:#1A1A1A;
+}
+
+#headerDiv{
+    height:55px;
+}
+
+#boxLogin{
+    border: 2px solid white;
+    height:350px; 
+    width:200px; 
+    margin: auto; 
+    text-align: center; 
+    align-items: center;
+}
+
+#loginHeader{
+    color:#fefeff;
+}
+
+#label{
+    outline: none;
+    background-color: #333333;
+    border: none;
+    color: #fefeff;
+}
+
+#LoginButton{
+    width: 100px; 
+    height: 25px;
+    background-color:#333333;
+    color:#fefeff;
+    border: none;
+}
+
+#LoginButton:hover{
+    opacity: 0.8;
+    background-color: #292828;
+}

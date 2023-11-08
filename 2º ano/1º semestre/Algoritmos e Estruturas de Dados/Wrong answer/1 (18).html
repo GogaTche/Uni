@@ -1,0 +1,211 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00368885_B_Afonso_Silva_76943</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/submissions/00368885_B_Afonso_Silva_76943">00368885_B_Afonso_Silva_76943</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/submissions/00368885_B_Afonso_Silva_76943/SmartMergeSort.java">SmartMergeSort.java</a>
+<a href="data/contests/AED22P3/submissions/00368885_B_Afonso_Silva_76943/SmartMergeSort.java">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri Nov 11 19:06:12 +0000 2022</td></tr>
+<tr><th>Analyzed</td>	<td>Fri Nov 11 19:06:12 +0000 2022 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/groups/students/Afonso_Silva_76943">
+Afonso_Silva_76943
+</a> Login: <code>Afonso_Silva_76943</code> Group: students [students]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/AED22P3/problems/B">
+B: SmartMergeSort
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>src/aed/sorting/SmartMergeSort.java:54: warning: [unchecked] unchecked cast
+        T[] b = (T[]) new Comparable[a.length]; 
+                      ^
+  required: T[]
+  found:    Comparable[]
+  where T is a type-variable:
+    T extends Comparable<T> declared in method <T>copyArray(T[])
+1 warning</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre></pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+package aed.sorting;
+import java.util.Random;
+
+public class SmartMergeSort extends Sort {
+
+    private static final int MAX_INTERVAL = 64;
+
+    //creates a random generator with a specific seed
+    //this is useful for testing methods that are supposed to generate random elements
+    //because we can always repeat the same tests by using the same seed
+    private static final Random pseudoRandom = new Random(3729);
+
+
+    //sort an array of elements (using InsertionSort) from low to high (including)
+    //assuming that the first n elements are already sorted between themselves
+    //this variation implies that we can start with a bigger hand immediately
+    //this method is very useful for the SmartMergeSort in order to extend a natural
+    //ascending run with additional elements to make a run with minimum size
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void insertionSortWithInitialSortedHand(T[] a, int low, int n, int high)
+    {
+        assert(low &lt; high);
+        assert(n &gt; 0);
+        assert(low + n &lt;= high);
+        for(int i = low + 1 + n; i &lt;= high; i++)
+        {
+        for(int j = i; j &gt; low ; j--)
+        {
+        if(less(a[j],a[j-1]))
+        {
+        exchange(a, j,j-1);
+        }
+        else break;
+        }
+        }
+    }
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; Run getNaturalRun(T[] a, int low, int high)
+    {
+        assert(low &lt; high);
+        Run run = new Run(low, 1);
+        for(int i = low + 1; i &lt;= high; i++){
+          if(less(a[i-1], a[i])) run.length++;
+          else break;
+        }
+        return run;
+    }
+
+    public static int module(int n){
+        if(n &lt; 0)return -n;
+        else return n;
+    }
+
+    public  static &lt;T extends Comparable&lt;T&gt;&gt; T[] copyArray(T[]a){
+        T[] b = (T[]) new Comparable[a.length]; 
+        for(int i = 0; i &lt; a.length; i++){
+            b[i] = a[i];
+        }
+        return b;
+    } 
+
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; Run getNaturalOrMakeAscendingRun(T[] a, int low, int high)
+    {
+        assert(low &lt; high);
+        Run run = new Run(low, 1);
+        if(less(a[low+1], a[low])) {
+            T[] b = copyArray(a);
+                for(int i = low + 1; i &lt;= high; i++){
+                    if(less(a[i], a[i-1])) {
+                    run.length++; 
+                    }
+        else break;
+        }
+            for(int i = run.start; i &lt; run.length; i++){
+                a[i] = b[module(run.length-1 - i)];
+            }
+        }
+    else run = getNaturalRun(a, low, high);
+        return run;
+    }
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; Run getNextRunWithMinimumSize(T[] a, int low, int high, int minRunSize)
+    {
+        assert(low &lt; high);
+        assert(minRunSize &gt; 0);
+
+        
+        return null;
+    }
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void merge(T[] a, T[] aux, Run leftRun, Run rightRun)
+    {
+        assert(rightRun.start == leftRun.start + leftRun.length);
+
+        //TODO: implement
+    }
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void mergeCollapse(MergeStack stack, T[] a, T[] aux)
+    {
+        //TODO: implement
+    }
+
+
+    public static &lt;T extends Comparable&lt;T&gt;&gt; void sort(T[] a)
+    {
+
+        //TODO: implement
+
+        //Pro Tip: this is how we can create an aux array of Comparables
+        @SuppressWarnings("unchecked")
+        T[] aux = (T[]) new Comparable[a.length];
+    }
+
+
+    public static Integer[] generateLargeNaturalRunsExample(Random randomGenerator, int n)
+    {
+        //todo: implement
+        return null;
+    }
+
+
+    public static void main(String[] args)
+    {
+        Integer a[] = {2, 4, 5, 3, 2, 1};
+        int n = a.length;
+        Run run = getNaturalOrMakeAscendingRun(a, 0, n-1);
+        System.out.println(run.length);
+        for(int i = 0; i &lt; n; i++){
+            System.out.print(a[i] + " ");
+        }
+    }
+}
+
+</pre>
+
+</body>

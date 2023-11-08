@@ -1,0 +1,298 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 02184575_C_Afonso_Silva_76943</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/submissions/02184575_C_Afonso_Silva_76943">02184575_C_Afonso_Silva_76943</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/submissions/02184575_C_Afonso_Silva_76943/TwualgerC.java">TwualgerC.java</a>
+<a href="data/contests/AED22P4/submissions/02184575_C_Afonso_Silva_76943/TwualgerC.java">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri Dec 02 19:27:35 +0000 2022</td></tr>
+<tr><th>Analyzed</td>	<td>Fri Dec 02 19:27:35 +0000 2022 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/groups/students/Afonso_Silva_76943">
+Afonso_Silva_76943
+</a> Login: <code>Afonso_Silva_76943</code> Group: students [students]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/AED22P4/problems/C">
+C: TwualgerC
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>src/aed/twualger/TwualgerC.java:162: error: invalid method reference
+        listCache.sort(TwualgerB::compare);
+                       ^
+  cannot find symbol
+    symbol:   method compare(E,E)
+    location: class TwualgerB
+  where E is a type-variable:
+    E extends Object declared in interface List
+1 error</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre></pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+package aed.twualger;
+
+import aed.tables.Treap;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+
+import javax.annotation.processing.SupportedOptions;
+
+public class TwualgerC extends Twualger {
+
+    //ideally we would use current datetime, but we only have tweet data until Jully 11th
+    private static final OffsetDateTime CURRENT_DATE = OffsetDateTime.of(2022,07,11,23,59,59,0,ZoneOffset.UTC);
+    private static final OffsetDateTime CURRENT_MINUS_72H = CURRENT_DATE.minusHours(72);
+
+    HashMap&lt;String,UserCacheB&gt; cache;
+    private int hit = 0;
+    private int miss = 0;
+
+    public TwualgerC(String path)
+    {
+        super(path);
+        this.cache = new  HashMap&lt;String, UserCacheB&gt;();
+        List&lt;String&gt; topCelebs = Twualger.readTopCelebs(path);
+        for (int i = 0; i &lt; topCelebs.size(); i++) {
+            UserCacheB userCacheB = readUserTweetsFromFile(path, topCelebs.get(i), CURRENT_MINUS_72H);
+            userCacheB.isTop = true;
+            // result.useCount++;
+            this.cache.put(topCelebs.get(i), userCacheB);
+        }
+    }
+	
+	public List&lt;UserCacheB&gt; getCaches()
+    {
+        return new ArrayList&lt;UserCacheB&gt;(this.cache.values());
+    }
+
+
+    public static UserCacheB readUserTweetsFromFile(String path, String userHandle, OffsetDateTime oldest)
+    {
+        @SuppressWarnings("unchecked")
+        Treap&lt;OffsetDateTime, Tweet&gt; tweets = new Treap();
+        UserCacheB result = new UserCacheB(userHandle);
+        try 
+        {
+            File file = new File(path + "/" + userHandle + ".csv");
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = br.readLine();
+            String[] tweetSplit;
+            while ((line = br.readLine()) != null) {
+                tweetSplit = line.split(",", 3);
+                Tweet tweet = new Tweet(Long.parseLong(tweetSplit[0]), OffsetDateTime.parse(tweetSplit[1], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ssZZZZZ")), userHandle, tweetSplit[2]);
+                if(tweet.date.compareTo(oldest) &lt; 0){
+                    result.moreTweetsInFile = true;
+                    break;
+                }
+                tweets.put(tweet.date, tweet);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        result.tweets = tweets;
+        return result;
+    }
+
+    public static void updateUserCacheFromFile(UserCacheB userCache, String path, String userHandle, OffsetDateTime oldest)
+    {
+        try 
+        {
+            File file = new File(path + "/" + userHandle + ".csv");
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String[] tweetSplit;
+            // OffsetDateTime oldestCacheDate = userCache.tweets.min();
+            String line = br.readLine();
+            while ((line = br.readLine()) != null) {
+                userCache.moreTweetsInFile = false;
+                tweetSplit = line.split(",", 3);
+                Tweet tweet = new Tweet(Long.parseLong(tweetSplit[0]), OffsetDateTime.parse(tweetSplit[1], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ssZZZZZ")), userHandle, tweetSplit[2]);
+                if(tweet.date.compareTo(oldest) &gt;= 0 &amp;&amp; tweet.date.compareTo(tweet.date) &lt;= 0){
+                    userCache.tweets.put(tweet.date, tweet);
+                }
+                else if(tweet.date.compareTo(oldest) &lt; 0){
+                    userCache.moreTweetsInFile = true;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public UserCacheB getUserCache(String userHandle)
+    {
+        UserCacheB result = this.cache.get(userHandle);
+        if (result != null) {
+            hit++;
+            result.useCount++;
+        }
+        else{
+            result = readUserTweetsFromFile(path, userHandle, CURRENT_MINUS_72H);
+            miss++;
+            result.useCount++;
+            this.cache.put(userHandle, result);
+        }
+        return result;
+    }
+
+    public List&lt;Tweet&gt; buildTimeLine(List&lt;String&gt; following, OffsetDateTime from, OffsetDateTime to)
+    {
+        List&lt;Tweet&gt; result = new ArrayList&lt;&gt;();
+        UserCacheB followingCache;
+        for (int i = 0; i &lt; following.size(); i++) {
+            followingCache = getUserCache(following.get(i));
+            if(followingCache.moreTweetsInFile == true){
+                updateUserCacheFromFile(followingCache, path, followingCache.userName, from);
+                this.cache.replace(followingCache.userName, followingCache);
+            }
+            Iterable&lt;Tweet&gt; tweetIterable = followingCache.tweets.values();
+            for (Tweet tweet : tweetIterable) {
+                if (tweet.date.compareTo(from) &gt;= 0 &amp;&amp; tweet.date.compareTo(to) &lt;= 0) {
+                    result.add(tweet);
+                }
+            }
+        }
+        result.sort((Tweet a, Tweet b) -&gt; b.date.compareTo(a.date));
+        return result;
+    }
+
+    public int totalSearches() {
+        return hit + miss;
+    }
+
+    public float cacheHitRatio() {
+        return totalSearches() == 0 ? 0 : ((float) hit) / ((float) miss + (float) hit);
+    }
+
+   public void onlyLast72hours(List&lt;UserCacheB&gt; listCache){
+        @SuppressWarnings("unchecked")
+        Treap&lt;OffsetDateTime, Tweet&gt; tweets = new Treap();
+        for(int i = 0; i &lt; listCache.size(); i++){
+            Iterable&lt;Tweet&gt; tweetIterable = listCache.get(i).tweets.values();
+            for (Tweet tweet : tweetIterable) {
+                if(tweet.date.compareTo(CURRENT_MINUS_72H) &lt; 0) break;
+                tweets.put(tweet.date, tweet);
+            }
+            listCache.get(i).tweets = tweets;
+        }
+   }
+
+    public void downsizeCache()
+    {
+        List&lt;UserCacheB&gt; listCache = getCaches();
+        int limit = (listCache.size()) / 2;
+        int n = listCache.size();
+        listCache.sort(TwualgerB::compare);
+        for (int i = n-1; i &gt;= 0 &amp;&amp; limit &gt; 0; i--) {
+            if (!listCache.get(i).isTop) {
+                this.cache.remove(listCache.get(i).userName);
+                listCache.remove(i);
+                limit--;
+            }
+            else{
+                    UserCacheB userCache = listCache.get(i);
+                    userCache.useCount = 0;
+                    this.cache.replace(userCache.userName, userCache);
+            }
+        }
+        hit = 0;
+        miss = 0;
+        onlyLast72hours(listCache);
+        for(int i = 0; i &lt; listCache.size(); i++){
+            this.cache.replace(listCache.get(i).userName, listCache.get(i));
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        String path = "C:\\Users\\afons\\OneDrive\\Documentos\\aed\\p4\\data";
+        TwualgerC twualger = new TwualgerC(path);
+        // Iterable&lt;Tweet&gt; tweetIterable = twualger.cache.get("elonmusk").tweets.values();
+        ArrayList&lt;String&gt; following = new ArrayList&lt;String&gt;(Arrays.asList("elonmusk"));
+
+        List&lt;Tweet&gt; tweets = twualger.buildTimeLine(
+                following,
+                OffsetDateTime.of(2022,5,1,0,0,0,0, ZoneOffset.UTC),
+                OffsetDateTime.of(2022,6,29,23,59,0,0,ZoneOffset.UTC));
+
+                
+
+        printTweets(tweets);
+        System.out.println(twualger.cache.get("elonmusk").useCount);
+        twualger.
+        getUserCache("elonmusk");
+        System.out.println(twualger.cache.get("elonmusk").useCount);
+        System.out.println(twualger.cache.get("elonmusk").tweets.min());
+        System.out.println(twualger.cache.get("elonmusk").tweets.max());
+        // Iterable&lt;Tweet&gt; tweetIterable = twualger.cache.get("elonmusk").tweets.values();
+        // for(Tweet tweet : tweetIterable){
+        //     System.out.println("[" + tweet + "]");
+        // }
+        // System.out.println(twualger.cache.get("elonmusk").moreTweetsInFile);
+        // UserCacheB cacheElon = twualger.cache.get("elonmusk");
+        // updateUserCacheFromFile(cacheElon, path, "elonmusk", OffsetDateTime.of(2022,5,3,15,39,55,0,ZoneOffset.UTC));
+        // Iterable&lt;Tweet&gt; tweetIterable2 = cacheElon.tweets.values();
+        // for(Tweet tweet : tweetIterable2){
+        //     System.out.println(tweet);
+        // }
+        // System.out.println(cacheElon.moreTweetsInFile);
+    }
+
+}
+
+</pre>
+
+</body>
