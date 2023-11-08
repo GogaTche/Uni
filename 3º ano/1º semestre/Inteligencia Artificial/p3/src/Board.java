@@ -85,41 +85,39 @@ public class Board implements Ilayout,Cloneable{
             gameOver = true;
         }
 
-        // Check for a winner.
-       
-        /** YOUR CODE HERE */
-
+        if(checkWinner()){
+            winner = getTurn();
+            gameOver = true;
+        }
 
         playersTurn = (playersTurn == ID.X) ? ID.O : ID.X;
         return true;
     }
 
-    private boolean checkLines(){
+    private boolean isCurrentTurn(ID turn){
+        return turn.name().equals(getTurn().name());
+    }
+
+    private boolean checkWinner(int index, int range, int sum){
+        for(int j = index; j < range; j+=sum){
+            if(!isCurrentTurn(board[j/M][j%M]))
+                break;
+            if(j == range - 1)
+                return true;
+        }
+        return false;
+    }
+
+    private boolean checkWinner(){
         for(int i = 0; i < N*M; i++){
-            if(i + K - 1 < M){
-                for(int j = i; j < i + K; j++){
-                    if(!board[j/M][j%M].name().equals(getTurn().name()))
-                        break;
-                    if(j == i+K-1)
-                        return true;
-                }
-            }
-            if(i + K*(N-1) < M*N){
-                for(int j = i; j <= i + K*(N-1); j+=N){
-                    if(!board[j/M][j%M].name().equals(getTurn().name()))
-                        break;
-                    if(j == i + K*(N-1))
-                        return true;
-                }
-            }
-            if(i + K*M - 1 < M*N){
-                for(int j = i; j < i + K*N; j+=N+1){
-                    if(!board[j/M][j%M].name().equals(getTurn().name()))
-                        break;
-                    if(j == i + K*N - 1)
-                        return true;
-                }
-            }
+            if(i + K - 1 < M && checkWinner(i, i + K,1))
+                return true;
+
+            if(i + K*(N-1) < M*N && checkWinner(i, i + K*(N-1) + 1, N))
+                return true;
+
+            if(i + K*M - 1 < M*N && checkWinner(i, i + K*N, N+1))
+                return true;    
         }
         return false;
     }
@@ -129,9 +127,6 @@ public class Board implements Ilayout,Cloneable{
      * @return          true if the game is over
      */
     public boolean isGameOver () {
-        gameOver = checkLines();
-        if(checkLines() == true)
-            winner = getTurn();
         return gameOver;
     }
 
@@ -217,8 +212,13 @@ public class Board implements Ilayout,Cloneable{
          * @return the children of the receiver.
      */   
      public List<Ilayout> children() {
- 		return null;
-        // YOUR CODE HERE
+ 		List<Ilayout> result = new LinkedList<>();
+        for(int i = 0; i < N*M; i++){
+            Board clone = (Board) this.clone();
+            if(clone.move(i))
+                result.add(clone);   
+        }
+        return result;
      }
    
 
