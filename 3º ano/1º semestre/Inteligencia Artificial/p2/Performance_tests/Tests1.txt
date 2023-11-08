@@ -1,0 +1,1448 @@
+---------------------------------------------------------------------------------------
+Start: -65876
+Goal: -197628
+
+[AStar]
+Weight: 16475
+Time: 63.463516600000005 ms
+Memory Used: 4.392020266666666 MegaBytes
+Formed Nodes: 32944 Nodes
+Expanded Nodes: 16471 Nodes
+Penetrance: 0.49996964545896067
+Path Length: 16471 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 16475
+Time: 7.4003233333333345 ms
+Memory Used: 3.490132799999999 MegaBytes
+Formed Nodes: 49413 Nodes
+Expanded Nodes: 16471 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 16471 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -43917
+Goal: -131751
+
+[AStar]
+Weight: 10986
+Time: 41.51812346666666 ms
+Memory Used: 3.8160954666666678 MegaBytes
+Formed Nodes: 21967 Nodes
+Expanded Nodes: 10982 Nodes
+Penetrance: 0.49993171575545137
+Path Length: 10982 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 10986
+Time: 5.212060100000001 ms
+Memory Used: 3.002501066666667 MegaBytes
+Formed Nodes: 32946 Nodes
+Expanded Nodes: 10982 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 10982 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -29278
+Goal: -87834
+
+[AStar]
+Weight: 7326
+Time: 24.12868996666667 ms
+Memory Used: 3.8517842666666695 MegaBytes
+Formed Nodes: 14646 Nodes
+Expanded Nodes: 7322 Nodes
+Penetrance: 0.49993172197186947
+Path Length: 7322 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 7326
+Time: 2.2239464999999994 ms
+Memory Used: 3.790625866666669 MegaBytes
+Formed Nodes: 21966 Nodes
+Expanded Nodes: 7322 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 7322 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -19518
+Goal: -58554
+
+[AStar]
+Weight: 4886
+Time: 14.814069933333332 ms
+Memory Used: 2.5607530666666674 MegaBytes
+Formed Nodes: 9766 Nodes
+Expanded Nodes: 4882 Nodes
+Penetrance: 0.499897603932009
+Path Length: 4882 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 4886
+Time: 1.5128100000000002 ms
+Memory Used: 2.553738933333333 MegaBytes
+Formed Nodes: 14646 Nodes
+Expanded Nodes: 4882 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 4882 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -13012
+Goal: -39036
+
+[AStar]
+Weight: 3259
+Time: 9.458689866666669 ms
+Memory Used: 1.7566749333333325 MegaBytes
+Formed Nodes: 6512 Nodes
+Expanded Nodes: 3255 Nodes
+Penetrance: 0.49984643734643736
+Path Length: 3255 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 3259
+Time: 1.0592601333333334 ms
+Memory Used: 1.7064034666666654 MegaBytes
+Formed Nodes: 9765 Nodes
+Expanded Nodes: 3255 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 3255 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -8674
+Goal: -26022
+
+[AStar]
+Weight: 2175
+Time: 5.859026700000001 ms
+Memory Used: 1.1663392000000001 MegaBytes
+Formed Nodes: 4344 Nodes
+Expanded Nodes: 2171 Nodes
+Penetrance: 0.4997697974217311
+Path Length: 2171 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 2175
+Time: 0.7098765666666667 ms
+Memory Used: 1.1553045333333334 MegaBytes
+Formed Nodes: 6513 Nodes
+Expanded Nodes: 2171 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 2171 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -5782
+Goal: -17346
+
+[AStar]
+Weight: 1452
+Time: 3.8116067666666678 ms
+Memory Used: 0.7793559999999997 MegaBytes
+Formed Nodes: 2898 Nodes
+Expanded Nodes: 1448 Nodes
+Penetrance: 0.4996549344375431
+Path Length: 1448 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 1452
+Time: 0.4721166666666666 ms
+Memory Used: 0.7800224000000002 MegaBytes
+Formed Nodes: 4344 Nodes
+Expanded Nodes: 1448 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 1448 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -3854
+Goal: -11562
+
+[AStar]
+Weight: 970
+Time: 2.2941066333333335 ms
+Memory Used: 0.5361802666666667 MegaBytes
+Formed Nodes: 1934 Nodes
+Expanded Nodes: 966 Nodes
+Penetrance: 0.49948293691830403
+Path Length: 966 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 970
+Time: 0.3147635 ms
+Memory Used: 0.5301269333333335 MegaBytes
+Formed Nodes: 2898 Nodes
+Expanded Nodes: 966 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 966 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -2569
+Goal: -7707
+
+[AStar]
+Weight: 649
+Time: 1.5626298666666665 ms
+Memory Used: 0.36583466666666664 MegaBytes
+Formed Nodes: 1293 Nodes
+Expanded Nodes: 645 Nodes
+Penetrance: 0.4988399071925754
+Path Length: 645 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 649
+Time: 0.21666660000000007 ms
+Memory Used: 0.36413253333333345 MegaBytes
+Formed Nodes: 1935 Nodes
+Expanded Nodes: 645 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 645 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -1712
+Goal: -5136
+
+[AStar]
+Weight: 434
+Time: 0.9063298 ms
+Memory Used: 0.25538080000000013 MegaBytes
+Formed Nodes: 862 Nodes
+Expanded Nodes: 430 Nodes
+Penetrance: 0.4988399071925754
+Path Length: 430 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 434
+Time: 0.15292336666666662 ms
+Memory Used: 0.2551175999999999 MegaBytes
+Formed Nodes: 1290 Nodes
+Expanded Nodes: 430 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 430 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -1141
+Goal: -3423
+
+[AStar]
+Weight: 292
+Time: 0.6035431666666666 ms
+Memory Used: 0.18249386666666678 MegaBytes
+Formed Nodes: 579 Nodes
+Expanded Nodes: 288 Nodes
+Penetrance: 0.49740932642487046
+Path Length: 288 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 292
+Time: 0.10574323333333333 ms
+Memory Used: 0.18311893333333334 MegaBytes
+Formed Nodes: 864 Nodes
+Expanded Nodes: 288 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 288 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -760
+Goal: -2280
+
+[AStar]
+Weight: 196
+Time: 0.34006666666666663 ms
+Memory Used: 0.12711466666666668 MegaBytes
+Formed Nodes: 386 Nodes
+Expanded Nodes: 192 Nodes
+Penetrance: 0.49740932642487046
+Path Length: 192 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 196
+Time: 0.07358013333333333 ms
+Memory Used: 0.12717733333333336 MegaBytes
+Formed Nodes: 576 Nodes
+Expanded Nodes: 192 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 192 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -506
+Goal: -1518
+
+[AStar]
+Weight: 133
+Time: 0.19426673333333333 ms
+Memory Used: 0.0858176 MegaBytes
+Formed Nodes: 260 Nodes
+Expanded Nodes: 129 Nodes
+Penetrance: 0.49615384615384617
+Path Length: 129 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 133
+Time: 0.04695343333333334 ms
+Memory Used: 0.08499200000000001 MegaBytes
+Formed Nodes: 387 Nodes
+Expanded Nodes: 129 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 129 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -337
+Goal: -1011
+
+[AStar]
+Weight: 91
+Time: 0.14884323333333335 ms
+Memory Used: 0.05835199999999997 MegaBytes
+Formed Nodes: 177 Nodes
+Expanded Nodes: 87 Nodes
+Penetrance: 0.4915254237288136
+Path Length: 87 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 91
+Time: 0.05161660000000001 ms
+Memory Used: 0.05842400000000002 MegaBytes
+Formed Nodes: 261 Nodes
+Expanded Nodes: 87 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 87 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -224
+Goal: -672
+
+[AStar]
+Weight: 62
+Time: 0.08784660000000002 ms
+Memory Used: 0.03980799999999999 MegaBytes
+Formed Nodes: 118 Nodes
+Expanded Nodes: 58 Nodes
+Penetrance: 0.4915254237288136
+Path Length: 58 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 62
+Time: 0.02713673333333333 ms
+Memory Used: 0.039832 MegaBytes
+Formed Nodes: 174 Nodes
+Expanded Nodes: 58 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 58 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -149
+Goal: -447
+
+[AStar]
+Weight: 44
+Time: 0.053376733333333336 ms
+Memory Used: 0.026560000000000018 MegaBytes
+Formed Nodes: 83 Nodes
+Expanded Nodes: 40 Nodes
+Penetrance: 0.4819277108433735
+Path Length: 40 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 44
+Time: 0.02218673333333333 ms
+Memory Used: 0.026560000000000018 MegaBytes
+Formed Nodes: 120 Nodes
+Expanded Nodes: 40 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 40 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -99
+Goal: -297
+
+[UniformCostSearch]
+Weight: 32
+Time: 8.726990066666668 ms
+Memory Used: 4.0913216 MegaBytes
+Formed Nodes: 29349 Nodes
+Expanded Nodes: 17714 Nodes
+Penetrance: 9.540359126375686E-4
+Path Length: 28 Nodes
+
+[AStar]
+Weight: 32
+Time: 0.03929333333333334 ms
+Memory Used: 0.02322293333333332 MegaBytes
+Formed Nodes: 61 Nodes
+Expanded Nodes: 29 Nodes
+Penetrance: 0.45901639344262296
+Path Length: 28 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 32
+Time: 0.02348666666666667 ms
+Memory Used: 0.021248000000000003 MegaBytes
+Formed Nodes: 84 Nodes
+Expanded Nodes: 28 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 28 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -66
+Goal: -198
+
+[UniformCostSearch]
+Weight: 23
+Time: 0.5999032999999999 ms
+Memory Used: 1.0839656 MegaBytes
+Formed Nodes: 3971 Nodes
+Expanded Nodes: 2330 Nodes
+Penetrance: 0.004784688995215311
+Path Length: 19 Nodes
+
+[AStar]
+Weight: 23
+Time: 0.025670000000000002 ms
+Memory Used: 0.01378613333333334 MegaBytes
+Formed Nodes: 40 Nodes
+Expanded Nodes: 19 Nodes
+Penetrance: 0.475
+Path Length: 19 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 23
+Time: 0.014286799999999999 ms
+Memory Used: 0.013280000000000009 MegaBytes
+Formed Nodes: 57 Nodes
+Expanded Nodes: 19 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 19 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -44
+Goal: -132
+
+[UniformCostSearch]
+Weight: 17
+Time: 0.1487665 ms
+Memory Used: 0.27640480000000006 MegaBytes
+Formed Nodes: 941 Nodes
+Expanded Nodes: 530 Nodes
+Penetrance: 0.01381509032943677
+Path Length: 13 Nodes
+
+[AStar]
+Weight: 17
+Time: 0.019176800000000008 ms
+Memory Used: 0.010518666666666666 MegaBytes
+Formed Nodes: 28 Nodes
+Expanded Nodes: 13 Nodes
+Penetrance: 0.4642857142857143
+Path Length: 13 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 17
+Time: 0.0213367 ms
+Memory Used: 0.010631999999999996 MegaBytes
+Formed Nodes: 39 Nodes
+Expanded Nodes: 13 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 13 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -29
+Goal: -87
+
+[UniformCostSearch]
+Weight: 14
+Time: 0.07526663333333333 ms
+Memory Used: 0.135408 MegaBytes
+Formed Nodes: 440 Nodes
+Expanded Nodes: 242 Nodes
+Penetrance: 0.022727272727272728
+Path Length: 10 Nodes
+
+[AStar]
+Weight: 14
+Time: 0.015690000000000006 ms
+Memory Used: 0.007932266666666663 MegaBytes
+Formed Nodes: 23 Nodes
+Expanded Nodes: 10 Nodes
+Penetrance: 0.43478260869565216
+Path Length: 10 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 14
+Time: 0.008763400000000001 ms
+Memory Used: 0.007976000000000004 MegaBytes
+Formed Nodes: 30 Nodes
+Expanded Nodes: 10 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 10 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -19
+Goal: -57
+
+[UniformCostSearch]
+Weight: 12
+Time: 0.038393399999999994 ms
+Memory Used: 0.07696799999999997 MegaBytes
+Formed Nodes: 250 Nodes
+Expanded Nodes: 135 Nodes
+Penetrance: 0.032
+Path Length: 8 Nodes
+
+[AStar]
+Weight: 12
+Time: 0.013736833333333334 ms
+Memory Used: 0.008063999999999995 MegaBytes
+Formed Nodes: 21 Nodes
+Expanded Nodes: 9 Nodes
+Penetrance: 0.38095238095238093
+Path Length: 8 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 12
+Time: 0.009066700000000002 ms
+Memory Used: 0.007959999999999997 MegaBytes
+Formed Nodes: 24 Nodes
+Expanded Nodes: 8 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 8 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -12
+Goal: -36
+
+[UniformCostSearch]
+Weight: 9
+Time: 0.014716733333333332 ms
+Memory Used: 0.023896000000000018 MegaBytes
+Formed Nodes: 81 Nodes
+Expanded Nodes: 44 Nodes
+Penetrance: 0.06172839506172839
+Path Length: 5 Nodes
+
+[AStar]
+Weight: 9
+Time: 0.0090334 ms
+Memory Used: 0.005304000000000002 MegaBytes
+Formed Nodes: 12 Nodes
+Expanded Nodes: 5 Nodes
+Penetrance: 0.4166666666666667
+Path Length: 5 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 9
+Time: 0.007360000000000002 ms
+Memory Used: 0.005312000000000001 MegaBytes
+Formed Nodes: 15 Nodes
+Expanded Nodes: 5 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 5 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -8
+Goal: -24
+
+[UniformCostSearch]
+Weight: 8
+Time: 0.014793400000000005 ms
+Memory Used: 0.021504000000000002 MegaBytes
+Formed Nodes: 71 Nodes
+Expanded Nodes: 39 Nodes
+Penetrance: 0.056338028169014086
+Path Length: 4 Nodes
+
+[AStar]
+Weight: 8
+Time: 0.007910233333333332 ms
+Memory Used: 0.005304000000000002 MegaBytes
+Formed Nodes: 10 Nodes
+Expanded Nodes: 4 Nodes
+Penetrance: 0.4
+Path Length: 4 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 8
+Time: 0.006896566666666665 ms
+Memory Used: 0.005312000000000001 MegaBytes
+Formed Nodes: 12 Nodes
+Expanded Nodes: 4 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 4 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -5
+Goal: -15
+
+[UniformCostSearch]
+Weight: 8
+Time: 0.013556633333333339 ms
+Memory Used: 0.015936000000000002 MegaBytes
+Formed Nodes: 48 Nodes
+Expanded Nodes: 25 Nodes
+Penetrance: 0.08333333333333333
+Path Length: 4 Nodes
+
+[AStar]
+Weight: 8
+Time: 0.0091735 ms
+Memory Used: 0.005312000000000001 MegaBytes
+Formed Nodes: 11 Nodes
+Expanded Nodes: 4 Nodes
+Penetrance: 0.36363636363636365
+Path Length: 4 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 8
+Time: 0.007806599999999998 ms
+Memory Used: 0.005312000000000001 MegaBytes
+Formed Nodes: 12 Nodes
+Expanded Nodes: 4 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 4 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -3
+Goal: -9
+
+[UniformCostSearch]
+Weight: 7
+Time: 0.008366533333333336 ms
+Memory Used: 0.010624000000000001 MegaBytes
+Formed Nodes: 33 Nodes
+Expanded Nodes: 19 Nodes
+Penetrance: 0.09090909090909091
+Path Length: 3 Nodes
+
+[AStar]
+Weight: 7
+Time: 0.008706633333333333 ms
+Memory Used: 0.00532 MegaBytes
+Formed Nodes: 13 Nodes
+Expanded Nodes: 5 Nodes
+Penetrance: 0.23076923076923078
+Path Length: 3 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 8
+Time: 0.006706600000000002 ms
+Memory Used: 0.005312000000000001 MegaBytes
+Formed Nodes: 12 Nodes
+Expanded Nodes: 4 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 4 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -2
+Goal: -6
+
+[UniformCostSearch]
+Weight: 5
+Time: 0.006979966666666666 ms
+Memory Used: 0.00532 MegaBytes
+Formed Nodes: 16 Nodes
+Expanded Nodes: 9 Nodes
+Penetrance: 0.125
+Path Length: 2 Nodes
+
+[AStar]
+Weight: 5
+Time: 0.005436633333333334 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 5 Nodes
+Expanded Nodes: 2 Nodes
+Penetrance: 0.4
+Path Length: 2 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 5
+Time: 0.005119966666666666 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 6 Nodes
+Expanded Nodes: 2 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 2 Nodes
+
+---------------------------------------------------------------------------------------
+Start: -1
+Goal: -3
+
+[UniformCostSearch]
+Weight: 4
+Time: 0.0061599666666666665 ms
+Memory Used: 0.00532 MegaBytes
+Formed Nodes: 13 Nodes
+Expanded Nodes: 6 Nodes
+Penetrance: 0.15384615384615385
+Path Length: 2 Nodes
+
+[AStar]
+Weight: 4
+Time: 0.0054334 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 5 Nodes
+Expanded Nodes: 2 Nodes
+Penetrance: 0.4
+Path Length: 2 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 4
+Time: 0.005016833333333332 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 6 Nodes
+Expanded Nodes: 2 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 2 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 0
+Goal: 0
+
+[UniformCostSearch]
+Weight: 0
+Time: 0.003003299999999999 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 0 Nodes
+Expanded Nodes: 0 Nodes
+Penetrance: 0.0
+Path Length: 0 Nodes
+
+[AStar]
+Weight: 0
+Time: 0.0028766666666666663 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 0 Nodes
+Expanded Nodes: 0 Nodes
+Penetrance: 0.0
+Path Length: 0 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 0
+Time: 0.0036900666666666673 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 0 Nodes
+Expanded Nodes: 0 Nodes
+Penetrance: 0.0
+Path Length: 0 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 1
+Goal: 3
+
+[UniformCostSearch]
+Weight: 2
+Time: 0.004279966666666666 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 7 Nodes
+Expanded Nodes: 3 Nodes
+Penetrance: 0.2857142857142857
+Path Length: 2 Nodes
+
+[AStar]
+Weight: 2
+Time: 0.005363299999999999 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 5 Nodes
+Expanded Nodes: 2 Nodes
+Penetrance: 0.4
+Path Length: 2 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 2
+Time: 0.0057733333333333334 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 6 Nodes
+Expanded Nodes: 2 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 2 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 2
+Goal: 6
+
+[UniformCostSearch]
+Weight: 4
+Time: 0.006789966666666667 ms
+Memory Used: 0.00532 MegaBytes
+Formed Nodes: 16 Nodes
+Expanded Nodes: 8 Nodes
+Penetrance: 0.125
+Path Length: 2 Nodes
+
+[AStar]
+Weight: 4
+Time: 0.0072335333333333335 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 7 Nodes
+Expanded Nodes: 3 Nodes
+Penetrance: 0.2857142857142857
+Path Length: 2 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 4
+Time: 0.0055533 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 6 Nodes
+Expanded Nodes: 2 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 2 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 3
+Goal: 9
+
+[UniformCostSearch]
+Weight: 5
+Time: 0.008623299999999999 ms
+Memory Used: 0.007976000000000004 MegaBytes
+Formed Nodes: 21 Nodes
+Expanded Nodes: 11 Nodes
+Penetrance: 0.14285714285714285
+Path Length: 3 Nodes
+
+[AStar]
+Weight: 5
+Time: 0.006356733333333335 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 8 Nodes
+Expanded Nodes: 3 Nodes
+Penetrance: 0.375
+Path Length: 3 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 5
+Time: 0.006223333333333333 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 9 Nodes
+Expanded Nodes: 3 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 3 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 4
+Goal: 12
+
+[UniformCostSearch]
+Weight: 5
+Time: 0.007730133333333333 ms
+Memory Used: 0.007976000000000004 MegaBytes
+Formed Nodes: 21 Nodes
+Expanded Nodes: 11 Nodes
+Penetrance: 0.14285714285714285
+Path Length: 3 Nodes
+
+[AStar]
+Weight: 5
+Time: 0.0057733333333333334 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 7 Nodes
+Expanded Nodes: 3 Nodes
+Penetrance: 0.42857142857142855
+Path Length: 3 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 5
+Time: 0.0056367 ms
+Memory Used: 0.0026560000000000004 MegaBytes
+Formed Nodes: 9 Nodes
+Expanded Nodes: 3 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 3 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 6
+Goal: 18
+
+[UniformCostSearch]
+Weight: 6
+Time: 0.009906333333333333 ms
+Memory Used: 0.010624000000000001 MegaBytes
+Formed Nodes: 32 Nodes
+Expanded Nodes: 16 Nodes
+Penetrance: 0.125
+Path Length: 4 Nodes
+
+[AStar]
+Weight: 6
+Time: 0.01119673333333333 ms
+Memory Used: 0.005304000000000002 MegaBytes
+Formed Nodes: 9 Nodes
+Expanded Nodes: 4 Nodes
+Penetrance: 0.4444444444444444
+Path Length: 4 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 6
+Time: 0.006426633333333333 ms
+Memory Used: 0.005312000000000001 MegaBytes
+Formed Nodes: 12 Nodes
+Expanded Nodes: 4 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 4 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 9
+Goal: 27
+
+[UniformCostSearch]
+Weight: 8
+Time: 0.013866566666666668 ms
+Memory Used: 0.023896000000000018 MegaBytes
+Formed Nodes: 80 Nodes
+Expanded Nodes: 41 Nodes
+Penetrance: 0.075
+Path Length: 6 Nodes
+
+[AStar]
+Weight: 8
+Time: 0.0110232 ms
+Memory Used: 0.005304000000000002 MegaBytes
+Formed Nodes: 14 Nodes
+Expanded Nodes: 6 Nodes
+Penetrance: 0.42857142857142855
+Path Length: 6 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 8
+Time: 0.007386666666666667 ms
+Memory Used: 0.005312000000000001 MegaBytes
+Formed Nodes: 18 Nodes
+Expanded Nodes: 6 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 6 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 13
+Goal: 39
+
+[UniformCostSearch]
+Weight: 10
+Time: 0.020993366666666666 ms
+Memory Used: 0.04252000000000002 MegaBytes
+Formed Nodes: 147 Nodes
+Expanded Nodes: 80 Nodes
+Penetrance: 0.05442176870748299
+Path Length: 8 Nodes
+
+[AStar]
+Weight: 10
+Time: 0.010963466666666666 ms
+Memory Used: 0.005304000000000002 MegaBytes
+Formed Nodes: 18 Nodes
+Expanded Nodes: 8 Nodes
+Penetrance: 0.4444444444444444
+Path Length: 8 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 10
+Time: 0.008093333333333334 ms
+Memory Used: 0.007959999999999997 MegaBytes
+Formed Nodes: 24 Nodes
+Expanded Nodes: 8 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 8 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 19
+Goal: 57
+
+[UniformCostSearch]
+Weight: 13
+Time: 0.04570669999999999 ms
+Memory Used: 0.08865599999999998 MegaBytes
+Formed Nodes: 292 Nodes
+Expanded Nodes: 160 Nodes
+Penetrance: 0.03767123287671233
+Path Length: 11 Nodes
+
+[AStar]
+Weight: 13
+Time: 0.01574673333333333 ms
+Memory Used: 0.007952000000000008 MegaBytes
+Formed Nodes: 24 Nodes
+Expanded Nodes: 11 Nodes
+Penetrance: 0.4583333333333333
+Path Length: 11 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 13
+Time: 0.010766533333333331 ms
+Memory Used: 0.007976000000000004 MegaBytes
+Formed Nodes: 33 Nodes
+Expanded Nodes: 11 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 11 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 28
+Goal: 84
+
+[UniformCostSearch]
+Weight: 17
+Time: 0.12278340000000001 ms
+Memory Used: 0.2545162666666666 MegaBytes
+Formed Nodes: 860 Nodes
+Expanded Nodes: 486 Nodes
+Penetrance: 0.01744186046511628
+Path Length: 15 Nodes
+
+[AStar]
+Weight: 17
+Time: 0.017760166666666667 ms
+Memory Used: 0.010680800000000006 MegaBytes
+Formed Nodes: 31 Nodes
+Expanded Nodes: 15 Nodes
+Penetrance: 0.4838709677419355
+Path Length: 15 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 17
+Time: 0.011096733333333332 ms
+Memory Used: 0.010631999999999996 MegaBytes
+Formed Nodes: 45 Nodes
+Expanded Nodes: 15 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 15 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 42
+Goal: 126
+
+[UniformCostSearch]
+Weight: 24
+Time: 0.8570300333333332 ms
+Memory Used: 1.4435415999999996 MegaBytes
+Formed Nodes: 5344 Nodes
+Expanded Nodes: 3123 Nodes
+Penetrance: 0.004116766467065869
+Path Length: 22 Nodes
+
+[AStar]
+Weight: 24
+Time: 0.02442323333333334 ms
+Memory Used: 0.013934666666666666 MegaBytes
+Formed Nodes: 45 Nodes
+Expanded Nodes: 22 Nodes
+Penetrance: 0.4888888888888889
+Path Length: 22 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 24
+Time: 0.013493266666666672 ms
+Memory Used: 0.015936000000000002 MegaBytes
+Formed Nodes: 66 Nodes
+Expanded Nodes: 22 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 22 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 63
+Goal: 189
+
+[UniformCostSearch]
+Weight: 35
+Time: 18.21819993333333 ms
+Memory Used: 8.3723736 MegaBytes
+Formed Nodes: 60669 Nodes
+Expanded Nodes: 36603 Nodes
+Penetrance: 5.439351233743757E-4
+Path Length: 33 Nodes
+
+[AStar]
+Weight: 35
+Time: 0.043890000000000005 ms
+Memory Used: 0.08730800000000008 MegaBytes
+Formed Nodes: 68 Nodes
+Expanded Nodes: 33 Nodes
+Penetrance: 0.4852941176470588
+Path Length: 33 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 35
+Time: 0.01741676666666667 ms
+Memory Used: 0.08315200000000007 MegaBytes
+Formed Nodes: 99 Nodes
+Expanded Nodes: 33 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 33 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 94
+Goal: 282
+
+[UniformCostSearch]
+Weight: 50
+Time: 853.5828399666667 ms
+Memory Used: 195.74352719999996 MegaBytes
+Formed Nodes: 1645663 Nodes
+Expanded Nodes: 994930 Nodes
+Penetrance: 2.916757562149723E-5
+Path Length: 48 Nodes
+
+[AStar]
+Weight: 50
+Time: 0.07248329999999999 ms
+Memory Used: 1.0485760000000004 MegaBytes
+Formed Nodes: 97 Nodes
+Expanded Nodes: 48 Nodes
+Penetrance: 0.4948453608247423
+Path Length: 48 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 50
+Time: 0.030610033333333335 ms
+Memory Used: 1.0485760000000004 MegaBytes
+Formed Nodes: 144 Nodes
+Expanded Nodes: 48 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 48 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 141
+Goal: 423
+
+[AStar]
+Weight: 74
+Time: 0.10028326666666666 ms
+Memory Used: 0.04974133333333334 MegaBytes
+Formed Nodes: 146 Nodes
+Expanded Nodes: 72 Nodes
+Penetrance: 0.4931506849315068
+Path Length: 72 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 74
+Time: 0.038933166666666665 ms
+Memory Used: 0.04780800000000001 MegaBytes
+Formed Nodes: 216 Nodes
+Expanded Nodes: 72 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 72 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 211
+Goal: 633
+
+[AStar]
+Weight: 109
+Time: 0.16049669999999996 ms
+Memory Used: 0.07267200000000001 MegaBytes
+Formed Nodes: 216 Nodes
+Expanded Nodes: 107 Nodes
+Penetrance: 0.49537037037037035
+Path Length: 107 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 109
+Time: 0.04084009999999998 ms
+Memory Used: 0.071704 MegaBytes
+Formed Nodes: 321 Nodes
+Expanded Nodes: 107 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 107 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 316
+Goal: 948
+
+[AStar]
+Weight: 161
+Time: 0.2596098666666667 ms
+Memory Used: 0.10715200000000004 MegaBytes
+Formed Nodes: 319 Nodes
+Expanded Nodes: 159 Nodes
+Penetrance: 0.49843260188087773
+Path Length: 159 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 161
+Time: 0.06473659999999999 ms
+Memory Used: 0.10617386666666673 MegaBytes
+Formed Nodes: 477 Nodes
+Expanded Nodes: 159 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 159 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 474
+Goal: 1422
+
+[AStar]
+Weight: 240
+Time: 0.4614899666666668 ms
+Memory Used: 0.16073973333333333 MegaBytes
+Formed Nodes: 477 Nodes
+Expanded Nodes: 238 Nodes
+Penetrance: 0.4989517819706499
+Path Length: 238 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 240
+Time: 0.08708346666666668 ms
+Memory Used: 0.15579599999999996 MegaBytes
+Formed Nodes: 714 Nodes
+Expanded Nodes: 238 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 238 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 711
+Goal: 2133
+
+[AStar]
+Weight: 359
+Time: 0.7099766333333334 ms
+Memory Used: 0.21846879999999985 MegaBytes
+Formed Nodes: 716 Nodes
+Expanded Nodes: 357 Nodes
+Penetrance: 0.49860335195530725
+Path Length: 357 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 359
+Time: 0.12217313333333334 ms
+Memory Used: 0.21749599999999994 MegaBytes
+Formed Nodes: 1071 Nodes
+Expanded Nodes: 357 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 357 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 1066
+Goal: 3198
+
+[AStar]
+Weight: 536
+Time: 1.1542666333333333 ms
+Memory Used: 0.3117149333333333 MegaBytes
+Formed Nodes: 1069 Nodes
+Expanded Nodes: 534 Nodes
+Penetrance: 0.49953227315247895
+Path Length: 534 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 536
+Time: 0.22048320000000002 ms
+Memory Used: 0.30696506666666673 MegaBytes
+Formed Nodes: 1602 Nodes
+Expanded Nodes: 534 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 534 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 1599
+Goal: 4797
+
+[AStar]
+Weight: 803
+Time: 1.9203166999999999 ms
+Memory Used: 0.4560360000000001 MegaBytes
+Formed Nodes: 1604 Nodes
+Expanded Nodes: 801 Nodes
+Penetrance: 0.4993765586034913
+Path Length: 801 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 803
+Time: 0.26791649999999995 ms
+Memory Used: 0.4439864000000003 MegaBytes
+Formed Nodes: 2403 Nodes
+Expanded Nodes: 801 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 801 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 2398
+Goal: 7194
+
+[AStar]
+Weight: 1202
+Time: 2.92382 ms
+Memory Used: 0.6601138666666667 MegaBytes
+Formed Nodes: 2401 Nodes
+Expanded Nodes: 1200 Nodes
+Penetrance: 0.4997917534360683
+Path Length: 1200 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 1202
+Time: 0.3818799666666666 ms
+Memory Used: 0.6514426666666666 MegaBytes
+Formed Nodes: 3600 Nodes
+Expanded Nodes: 1200 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 1200 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 3597
+Goal: 10791
+
+[AStar]
+Weight: 1802
+Time: 4.515040066666669 ms
+Memory Used: 0.9780202666666661 MegaBytes
+Formed Nodes: 3602 Nodes
+Expanded Nodes: 1800 Nodes
+Penetrance: 0.4997223764575236
+Path Length: 1800 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 1802
+Time: 0.5470634 ms
+Memory Used: 0.9604749333333337 MegaBytes
+Formed Nodes: 5400 Nodes
+Expanded Nodes: 1800 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 1800 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 5395
+Goal: 16185
+
+[AStar]
+Weight: 2701
+Time: 7.975706633333334 ms
+Memory Used: 1.4350677333333326 MegaBytes
+Formed Nodes: 5400 Nodes
+Expanded Nodes: 2699 Nodes
+Penetrance: 0.4998148148148148
+Path Length: 2699 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 2701
+Time: 0.9277433000000002 ms
+Memory Used: 1.4254359999999997 MegaBytes
+Formed Nodes: 8097 Nodes
+Expanded Nodes: 2699 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 2699 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 8092
+Goal: 24276
+
+[AStar]
+Weight: 4049
+Time: 13.518209899999999 ms
+Memory Used: 1.1584743999999998 MegaBytes
+Formed Nodes: 8095 Nodes
+Expanded Nodes: 4047 Nodes
+Penetrance: 0.4999382334774552
+Path Length: 4047 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 4049
+Time: 1.3741133 ms
+Memory Used: 2.003392533333334 MegaBytes
+Formed Nodes: 12141 Nodes
+Expanded Nodes: 4047 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 4047 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 12138
+Goal: 36414
+
+[AStar]
+Weight: 6072
+Time: 19.895930033333336 ms
+Memory Used: 3.1674986666666687 MegaBytes
+Formed Nodes: 12141 Nodes
+Expanded Nodes: 6070 Nodes
+Penetrance: 0.4999588172308706
+Path Length: 6070 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 6072
+Time: 2.3293766666666675 ms
+Memory Used: 3.102473066666668 MegaBytes
+Formed Nodes: 18210 Nodes
+Expanded Nodes: 6070 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 6070 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 18207
+Goal: 54621
+
+[AStar]
+Weight: 9107
+Time: 35.67309673333333 ms
+Memory Used: 2.9457231999999993 MegaBytes
+Formed Nodes: 18212 Nodes
+Expanded Nodes: 9105 Nodes
+Penetrance: 0.4999450911486932
+Path Length: 9105 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 9107
+Time: 4.899876666666668 ms
+Memory Used: 2.1199306666666664 MegaBytes
+Formed Nodes: 27315 Nodes
+Expanded Nodes: 9105 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 9105 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 27310
+Goal: 81930
+
+[AStar]
+Weight: 13658
+Time: 54.1206433 ms
+Memory Used: 4.206234133333333 MegaBytes
+Formed Nodes: 27313 Nodes
+Expanded Nodes: 13656 Nodes
+Penetrance: 0.49998169369897116
+Path Length: 13656 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 13658
+Time: 5.388166599999999 ms
+Memory Used: 5.4893856 MegaBytes
+Formed Nodes: 40968 Nodes
+Expanded Nodes: 13656 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 13656 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 40965
+Goal: 122895
+
+[AStar]
+Weight: 20486
+Time: 87.7295367 ms
+Memory Used: 5.821607200000001 MegaBytes
+Formed Nodes: 40970 Nodes
+Expanded Nodes: 20484 Nodes
+Penetrance: 0.49997559189650964
+Path Length: 20484 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 20486
+Time: 9.52071006666667 ms
+Memory Used: 2.7972674666666664 MegaBytes
+Formed Nodes: 61452 Nodes
+Expanded Nodes: 20484 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 20484 Nodes
+
+---------------------------------------------------------------------------------------
+Start: 61447
+Goal: 184341
+
+[AStar]
+Weight: 30727
+Time: 125.54816679999999 ms
+Memory Used: 9.412854399999999 MegaBytes
+Formed Nodes: 61452 Nodes
+Expanded Nodes: 30725 Nodes
+Penetrance: 0.499983727136627
+Path Length: 30725 Nodes
+
+[IterativeDeepeningAStar]
+Weight: 30727
+Time: 13.673436566666668 ms
+Memory Used: 6.815969333333332 MegaBytes
+Formed Nodes: 92175 Nodes
+Expanded Nodes: 30725 Nodes
+Penetrance: 0.3333333333333333
+Path Length: 30725 Nodes
+
