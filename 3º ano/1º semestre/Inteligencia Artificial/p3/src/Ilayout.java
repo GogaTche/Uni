@@ -1,6 +1,6 @@
 import java.util.*;
 interface Ilayout {
-    int N=4,M=4,K=4;
+
     enum ID{Blank, X, O}
 
 

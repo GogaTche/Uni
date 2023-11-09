@@ -10,10 +10,24 @@ import java.util.TimerTask;
 
 public class Console {
     private Board board;
+    private int rows;
+    private int columns;
+    private int k;
+
     private Scanner sc = new Scanner(System.in);
 
-    private Console() {
-        board = new Board();
+    private Console() throws Exception {
+
+        System.out.print("Rows: ");
+        this.rows = Integer.parseInt(sc.next());
+
+        System.out.print("Columns: ");
+        this.columns = Integer.parseInt(sc.next());
+
+        System.out.print("Winner's length: ");
+        this.k = Integer.parseInt(sc.next());
+
+        board = new Board(rows, columns, k);
     }
 
     /**
@@ -62,10 +76,10 @@ public class Console {
 
         int move = sc.nextInt();
 
-        if (move < 0 || move >= Ilayout.N* Ilayout.M) {
+        if (move < 0 || move >= rows * columns) {
             System.out.println("\nInvalid move.");
             System.out.println("\nThe index of the move must be between 0 and "
-                    + (Ilayout.N * Ilayout.M - 1) + ", inclusive.");
+                    + (rows * columns - 1) + ", inclusive.");
         } else if (!board.isBlank(move)) {
             System.out.println("\nInvalid move.");
             System.out.println("\nThe selected index must be blank.");
@@ -88,7 +102,7 @@ public class Console {
 
     
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws Exception  {
     	    final int repetitions=3;
     	    long times = 0;
     	    for(int i=0; i<repetitions; i++) {

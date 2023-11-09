@@ -6,6 +6,11 @@ import java.util.*;
  */
 public class Board implements Ilayout,Cloneable{
 
+    private int rows;
+    private int columns;
+    private int rc;
+    private int k;
+
     
     private ID[][] board;
     private ID playersTurn;
@@ -16,9 +21,21 @@ public class Board implements Ilayout,Cloneable{
     private boolean gameOver;
 
     
-    Board() {
-        board = new ID[N][M];
+    public Board(int rows, int columns, int k) throws Exception {
+
+        if(rows != columns)
+            throw new Exception("The number of rows must be equal to the number of columns.");
+        if(rows < k)
+            throw new Exception("K must be less than the rows of the board.");
+        
+        this.rows = rows;
+        this.columns = columns;
+        this.rc = rows * columns;
+        this.k = k;
+
+        board = new ID[this.rows][this.columns];
         movesAvailable = new HashSet<>();
+
         reset();
     }
 
@@ -27,13 +44,13 @@ public class Board implements Ilayout,Cloneable{
      * available at the start of the game).
      */
     private void initialize () {
-        for (int row = 0; row < N; row++)
-            for (int col = 0; col < M; col++) {
+        for (int row = 0; row < this.rows; row++)
+            for (int col = 0; col < this.columns; col++) {
                 board[row][col] = ID.Blank;
             }
         movesAvailable.clear();
 
-        for (int i = 0; i < N*M; i++) {
+        for (int i = 0; i < rc; i++) {
             movesAvailable.add(i);
         }
     }
@@ -55,7 +72,7 @@ public class Board implements Ilayout,Cloneable{
      * @return          true if the move has not already been played
      */
     public boolean move (int index) {
-        return move(index% M, index/M);
+        return move(index % rows, index/rows);
     }
 
     /**
@@ -77,10 +94,10 @@ public class Board implements Ilayout,Cloneable{
         }
 
         moveCount++;
-        movesAvailable.remove(y * N + x);
+        movesAvailable.remove(y * rows + x);
 
         // The game is a draw.
-        if (moveCount == N * M) {
+        if (moveCount == rc) {
             winner = ID.Blank;
             gameOver = true;
         }
@@ -100,7 +117,7 @@ public class Board implements Ilayout,Cloneable{
 
     private boolean checkWinner(int index, int range, int sum){
         for(int j = index; j < range; j+=sum){
-            if(!isCurrentTurn(board[j/M][j%M]))
+            if(!isCurrentTurn(board[j/rows][j%rows]))
                 break;
             if(j == range - 1)
                 return true;
@@ -109,14 +126,14 @@ public class Board implements Ilayout,Cloneable{
     }
 
     private boolean checkWinner(){
-        for(int i = 0; i < N*M; i++){
-            if(i + K - 1 < M && checkWinner(i, i + K,1))
+        for(int i = 0; i < rc; i++){
+            if(i + k - 1 < columns && checkWinner(i, i + k,1))
                 return true;
 
-            if(i + K*(N-1) < M*N && checkWinner(i, i + K*(N-1) + 1, N))
+            if(i + k*(rows-1) < rc && checkWinner(i, i + k*(rows-1) + 1, rows))
                 return true;
 
-            if(i + K*M - 1 < M*N && checkWinner(i, i + K*N, N+1))
+            if(i + k*columns - 1 < rc && checkWinner(i, i + k*rows, rows+1))
                 return true;    
         }
         return false;
@@ -167,9 +184,9 @@ public class Board implements Ilayout,Cloneable{
     	try {
 	        Board b = (Board) super.clone();
 	
-	        b.board = new ID[N][M];
-	        for (int i = 0; i < N; i++)
-	        	for (int j=0; i<M; j++)
+	        b.board = new ID[rows][columns];
+	        for (int i = 0; i < rows; i++)
+	        	for (int j = 0; i < columns; j++)
 	        		b.board[i][j] = this.board[i][j];
 	       
 	        b.playersTurn       = this.playersTurn;
@@ -189,8 +206,8 @@ public class Board implements Ilayout,Cloneable{
     public String toString () {
         StringBuilder sb = new StringBuilder();
 
-        for (int y = 0; y < N; y++) {
-            for (int x = 0; x < M; x++) {
+        for (int y = 0; y < rows; y++) {
+            for (int x = 0; x < columns; x++) {
 
                 if (board[y][x] == ID.Blank) {
                     sb.append("-");
@@ -200,7 +217,7 @@ public class Board implements Ilayout,Cloneable{
                 sb.append(" ");
 
             }
-            if (y != N -1) {
+            if (y != rows -1) {
                 sb.append("\n");
             }
         }
@@ -213,7 +230,7 @@ public class Board implements Ilayout,Cloneable{
      */   
      public List<Ilayout> children() {
  		List<Ilayout> result = new LinkedList<>();
-        for(int i = 0; i < N*M; i++){
+        for(int i = 0; i < rc; i++){
             Board clone = (Board) this.clone();
             if(clone.move(i))
                 result.add(clone);   
@@ -229,8 +246,8 @@ public class Board implements Ilayout,Cloneable{
 		if (getClass() != other.getClass()) return false;
 		Board that = (Board) other;
 		
-		for (int y = 0; y < N; y++) 
-            for (int x = 0; x < M; x++) 
+		for (int y = 0; y < rows; y++) 
+            for (int x = 0; x < columns; x++) 
             	if (board[x][y] != that.board[x][y]) return false;
         return true;
 	}
@@ -241,8 +258,8 @@ public class Board implements Ilayout,Cloneable{
 	}
 		
 	public boolean isBlank (int index) {
-		int x=index/M;
-		int y=index%M;
+		int x=index/rows;
+		int y=index%rows;
         return (board[x][y] == ID.Blank);
 	}
 }
