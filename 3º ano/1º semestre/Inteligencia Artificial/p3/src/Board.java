@@ -24,9 +24,9 @@ public class Board implements Ilayout,Cloneable{
     public Board(int rows, int columns, int k) throws Exception {
 
         if(rows != columns)
-            throw new Exception("The number of rows must be equal to the number of columns.");
+            throw new InputMismatchException("The number of rows must be equal to the number of columns.");
         if(rows < k)
-            throw new Exception("K must be less than the rows of the board.");
+            throw new InputMismatchException("K must be less than the rows of the board.");
         
         this.rows = rows;
         this.columns = columns;
